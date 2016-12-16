@@ -20,7 +20,6 @@ export default class wootadmob extends Component {
     this.state = {
       adSize: 'smartBannerPortrait',
       adUnitID: AD_UNIT_ID,
-      testDeviceID: null,
       isAd: "AD IS NOT LOADED"
     };
 
@@ -49,7 +48,9 @@ export default class wootadmob extends Component {
         </Text>
         <PublisherBanner
           adViewDidReceiveAd={this.woot}
-          bannerSize={this.state.adSize} testDeviceID={this.state.testDeviceID} adUnitID={this.state.adUnitID}/>
+          bannerSize={this.state.adSize}
+          testDeviceID='EMULATOR'
+          adUnitID={this.state.adUnitID}/>
       </View>
     );
   }
